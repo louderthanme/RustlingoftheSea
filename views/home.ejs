@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="js/main.js" defer></script>
+    <!-- defer attribute to make sure that the html is loaded before the javascript tries to run -->
+    <script src="https://kit.fontawesome.com/cea4770b63.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <button id="prev-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+
+
+    <div id="book" class="book">
+        <!-- page 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <section id="titlesection">
+                        <h1 id="title">
+                            <%= author.stories[0].title %>
+                        </h1>
+                        <br>
+                        <h4 id="authorname"> by <%= author.firstname + author.lastname %> </h4>
+                    </section>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+
+                </div>
+            </div>
+        </div>
+        <!-- page 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <% for (let i = 0; i <= paragraphs.length; i++) { %>
+                    <p><%= paragraph[i] %> </p>
+                    <% } %>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+
+                    </div>
+                </div>
+            </div>
+            <!-- page 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Front 3</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>back 3</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="next-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+</body>
+
+</html>

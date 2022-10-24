@@ -43,11 +43,11 @@
         <!-- page 2 -->
         <div id="p2" class="paper">
             <div class="front">
+                <% for (let i = 0; i <= paragraphs.length; i++) { %>
                 <div id="f2" class="front-content">
-                    <% for (let i = 0; i <= paragraphs.length; i++) { %>
-                    <p><%= paragraph[i] %> </p>
-                    <% } %>
+                    <p><%= paragraphs[i] %> </p>
                 </div>
+                <% } %>
                 <div class="back">
                     <div id="b2" class="back-content">
 

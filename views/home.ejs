@@ -44,17 +44,14 @@
         <div id="p2" class="paper">
             <div class="front">
                 <div id="f2" class="front-content">
-                    <% for(let i = 0; i <= paragraphs.length; i++) { %>
-
-                    <% if(!paragraphs[i]) { %>
-                    <br>
-                    <br>
-                    <% } else {%>
-
                     <p>
+                        <% for(let i = 0; i <= paragraphs.length; i++) { %>
                         <%= paragraphs[i] %>
+                        <br>
+                        <br>
+                        <% } %>
                     </p>
-                    <% } %>
+
                 </div>
             </div>
             <div class="back">

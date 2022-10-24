@@ -6,7 +6,7 @@ const AuthorSchema = new Schema({
     lastname: String,
     stories: [{
         title: String,
-        paragraphs: [String],
+        paragraphs: String,
     }]
 })
 
